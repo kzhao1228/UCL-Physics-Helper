@@ -1,0 +1,238 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "Type_of_Classifications",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "galaxy classification",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "ellipticals",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "dwarf ellipticals",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "spirals",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "barred spirals",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "irregulars",
+              "synonyms": []
+            }
+          }
+        ]
+      },
+      {
+        "name": "Type_of_Components",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "blue disk stars",
+              "synonyms": [
+                "stars with blus disks"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "red bulge and halo stars",
+              "synonyms": [
+                "halo and red bulge stars",
+                "stars with halo and red bulge"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Type_of_Populations",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "#1 type of Stellar populations",
+              "synonyms": [
+                "type one stellar population",
+                "type one stellar populations",
+                "first type of stellar population",
+                "first type of stellar populations",
+                "1st type of stellar populations",
+                "1st type of stellar population"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "#2 type of Stellar populations",
+              "synonyms": [
+                "second type of stellar populations",
+                "second type of stellar population",
+                "type two stellar populations",
+                "type two stellar population",
+                "2nd type of stellar population",
+                "type of stellar populations"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Type_of_Properties",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "metal rich",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "metal poor",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "young and blue",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "old and red",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "circular orbits",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "elliptical and tilted orbits",
+              "synonyms": []
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.NoIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.PauseIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StartOverIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "AnswerIntent",
+        "samples": [
+          "{Types}",
+          "tell me about {Types}",
+          "what do you know about {Types}",
+          "{Types} information",
+          "{Components}",
+          "{Properties}",
+          "{classification}"
+        ],
+        "slots": [
+          {
+            "name": "Types",
+            "type": "Type_of_Populations"
+          },
+          {
+            "name": "Components",
+            "type": "Type_of_Components"
+          },
+          {
+            "name": "Properties",
+            "type": "Type_of_Properties"
+          },
+          {
+            "name": "classification",
+            "type": "Type_of_Classifications"
+          }
+        ]
+      },
+      {
+        "name": "AnswerIntent_a",
+        "samples": [
+          "{Classifications}"
+        ],
+        "slots": [
+          {
+            "name": "Classifications",
+            "type": "Type_of_Classifications"
+          }
+        ]
+      },
+      {
+        "name": "QuizIntent",
+        "samples": [
+          "start a quiz",
+          "start a quiz game",
+          "and start a quiz",
+          "and quiz me",
+          "for a quiz",
+          "a quiz"
+        ],
+        "slots": []
+      }
+    ],
+    "invocationName": "asu"
+  }
+}
