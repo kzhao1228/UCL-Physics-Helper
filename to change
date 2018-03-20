@@ -37,6 +37,178 @@ const data = [
                     
                    ];
 
+function getQuestion(counter, property, item)
+{
+    switch(property)
+    {
+        // case "Components":
+        //     return "Here is question number " + counter + ".  What are the " + formatCasing(property) + " of the "  + item.PplName + "?";
+        
+        // case "TypeOne":
+        // case "TypeTwo":
+        // case "TypeThree":
+        // case "TypeFour":
+        // case "TypeFive":
+        //     return "Here is question number " + counter + "..  What is the " + formatCasing(property) + " of the "  + item.Classification + "?";
+        
+        // case "EvidenceOne":
+        // case "EvidenceTwo":
+        // case "EvidenceThree":
+        // 	return "Here is question number " + counter + ".  What is the " + formatCasing(property) + " of the light as a particle?";
+        	
+        case "SolutionOne":
+            return "Here is question number " + counter + ".  Name the model which structures the atom as electrons surrounded by positively charged liquid.";
+        	
+        case "AnswerOne":	
+            return "Here is question number " + counter + ".  In the Photoelectric effect, give the name of the minimum energy an electron needs to receive to escape from the metal ";
+        	
+        case "Redshift":
+        case "Blueshift":
+            return "Here is question number " + counter + ".  If a galaxy has " + formatCasing(property) + " is it moving towards or away from the observer";
+        	
+        case "OClassification":
+        case "BClassification":
+        case "AClassification":
+        case "FClassification":
+        case "GClassification":
+        case "KClassification":
+        case "MClassification":
+            return "Here is question number " + counter + ".  What is the colour of a " + formatCasing(property) + " star?";
+        	
+        case "ThirtyMillion":
+        case "SixtyMillion":
+        case "NinetyMillion":
+        case "OneHundreedAndTwentyMillion":
+        case "OneHundredAndFiftyMillion":
+        case "OneHundredAndEightyMillion":
+        case "TwoHundredAndTenMillion":
+        case "TwoHundredAndFortyMillion":
+        case "TwoHundredAndSeventyMillion":
+        case "ThreeHundredMillion":
+        case "ThreeHundredAndThirtyMillion":
+        case "ThreeHundredAndSixtyMillion":
+        case "ThreeHundredAndNinetyMillion":
+        case "FourHundredAndTwentyMillion":
+        case "FourHundredAndFiftyMillion":
+        case "FourHundredAndEightyMillion":
+        case "FiveHundredAndTenMillion":
+        case "FiveHundredAndFortyMillion":
+        case "FiveHundredAndSeventyMillion":
+        case "SixHundredMillion":
+            return "Here is question number " + counter + ". What is the redshift to one decimal place of a galaxy with a recession velocity of, " +formatCasing(property) + ", metres per second?";	
+        	
+            
+        case "TwoPointZero":
+        case "TwoPointTwo":
+        case "TwoPointFour":
+        case "TwoPointSix":
+        case "TwoPointEight":
+        case "Three":
+        case "ThreepointTwo":
+        case "ThreePointFour":
+        case "ThreePointSeven":
+        case "ThreePointEight":
+        case "Four":
+        case "FourPointFive":
+        case "FourPointSix":
+        case "FivePointNine":
+        case "SixPointThree":
+        case "SevenPointFive":
+        case "EightPointTwo":
+        case "NinePointFour":
+        case "NinePointEight":  
+            return "Here is question number " + counter + ". What is the radius to the nearest kilometre of a black hole with a mass of, " +formatCasing(property) + ", times ten to the 31 kilograms?";	
+        	
+        	
+        case "OType":
+        case "BType":
+        case "AType":
+        case "FType":
+        case "GType":
+        case "KType":
+        case "MType":
+            return "Here is question number " + counter + ".  What is the surface temperature in Kelvin of a " + formatCasing(property) + " star?";
+        
+        case "OneHundredMetres":
+        case "OneCentimeter": 
+        case "TenThousandNanoMetres":
+        case "FiveHundredNanoMetres": 
+        case "OneHundredNanoMetres": 
+        case "OneNanoMetre":
+            return "Here is question number " + counter + ".  What is the type of electromagnetic wave with wavelength " + formatCasing(property) + "?";
+        
+        
+        case "Lyman":
+        case "Balmer":
+        case "Paschen":
+            return "Here is question number " + counter + ".  What is the value of m for a spectral emission line in the " + formatCasing(property) + " series?";
+        
+        case "E0":
+        case "E7":
+             return "Here is question number " + counter + ".  Is a " + formatCasing(property) + " elliptical galaxy completely round or elongated?";
+        
+        case "SolnA":
+            return "Here is question number " + counter + ".  Name the observed effect when the shining of light on a metal results in the emission of electrons.";
+        
+        case "SolnB":
+            return "Here is question number " + counter + ".  Which experiment gave rise to the planetary model of atom consisting of a tiny positively charged nucleus orbited by electrons?";
+        
+        case "SolnC":
+            return "Here is question number " + counter + ".  How many billion years will it take for the Sun to run out of Hydrogen?";
+        
+        case "SolnD":
+            return "Here is question number " + counter + ".  What is the process called in which small nuclei of atoms are joined into larger ones?";
+       
+        case "SolnE":
+            return "Here is question number " + counter + ".  The energy released per fusion / fission event is called what?";
+       
+        case "SolnF":
+            return "Here is question number " + counter + ".  What is the value of the Chandrasekhar limit given in terms of solar mass? ";
+       
+        case "SolnG":
+            return "Here is question number " + counter + ".  What is another name for the Schwarzschild radius?";
+        
+        case "SolnH":
+            return "Here is question number " + counter + ".  Give the law that states the further away a galaxy is, the greater is its redshift ?";
+        
+        case "SolnI":
+            return "Here is question number " + counter + ".  In the Photoelectric effect, does current flow when incident light is above or below the threshold frequency? ";
+        
+        case "SolnJ":
+            return "Here is question number " + counter + ". If the observed wavelength is larger than the emitted wavelength, does it imply a redshift or a blue shift? ";
+            
+        case "SolnK":
+             return "Here is question number " + counter + ".Give, in order, the letters of the Harvard Classification of stars.";
+             
+        case "SolnL":
+             return "Here is question number " + counter + ". What is the key physical parameter determining the evolution of a star?";
+             
+        case "SolnM":
+             return "Here is question number " + counter + ". For a White dwarf, as mass increases, does the radius increase or decrease?";
+       
+        case "SolnN":
+             return "Here is question number " + counter + ". A black hole is a body that is entirely contained within its what?";
+             
+        case "SolnO":
+             return "Here is question number " + counter + ". Sa, Sb, Sc describes spiral galaxies in order of increasing or decreasing bulge to disk ratio? ";
+             
+        case "SolnP":
+             return "Here is question number " + counter + ". Which population of star are blue disk stars? ";
+             
+        case "SolnQ":
+             return "Here is question number " + counter + ". Which population of star are red bulge and halo stars? ";
+             
+        case "SolnR":
+             return "Here is question number " + counter + ". What do we name the stars used for the determination of distances on cosmological scales? ";
+             
+        // default:
+        //     return "Here is question number " + counter + ".  What is the " + formatCasing(property) + " of the "  + item.PplName + "?";
+        
+    }
+}
+
+
+
 
 function getAnswer(property, item)
 {
