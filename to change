@@ -1,0 +1,172 @@
+const data = [
+            
+                    //{PplName: "#1 type of Stellar populations" ,  Components: "blue disk stars",          FirstProperty: "metal rich",     SecondProperty: "young and blue", ThirdProperty: "circular orbits"              },
+                    //{PplName: "#2 type of Stellar populations",   Components: "red bulge and halo stars", FirstProperty: "metal poor",     SecondProperty: "old and red",    ThirdProperty: "elliptical and tilted orbits" },
+                    //{Classification: "galaxy classification",     TypeOne: "ellipticals",                 TypeTwo:"dwarf ellipticals",     TypeThree:"spirals",              TypeFour:"barred spirals", TypeFive:"irregulars"},
+                    //{Evidence: "evidence",                        EvidenceOne: "photo-electric effect",   EvidenceTwo:"black-body radiation", EvidenceThree: "compton scattering"},
+                    {Pudding: "pudding", SolutionOne: "Plum pudding"},
+                    {Work: "work", AnswerOne: "work function"},
+                    {Wavelength: "wavelength", OneHundredMetres: "Radiowaves", OneCentimeter: "Microwave", TenThousandNanoMetres: "Infrared", FiveHundredNanoMetres: "Visible Light", OneHundredNanoMetres: "Ultraviolet", OneNanoMetre: "X-ray"},
+                    {Shape: "shape", E0: "round", E7: "elongated"},
+                    {SolnOne: "soln one", SolnA: "photoelectric effect"},
+                    {SolnTwo: "soln two", SolnB: "Rutherford’s scattering experiment"},
+                    {SolnThree: "soln three", SolnC: "4.6"},
+                    {SolnFour: "soln four", SolnD: "Nuclear fusion"},
+                    {SolnFive: "soln five", SolnE: "binding energy"},
+                    {SolnSix: "soln six", SolnF: "1.44"},
+                    {SolnSeven: "soln seven", SolnG: "event horizon"},
+                    {SolnEight: "soln eight", SolnH: "Hubble's Law"},
+                    {SolnNine: "soln nine", SolnI: "above"},
+                    {SolnTen: "soln ten", SolnJ: "redshift"},
+                    {SolnEleven: "soln eleven", SolnK: "O B A F G K M"},
+                    {SolnTwelve: "soln twelve", SolnL: "mass"},
+                    {SolnThirteen: "soln thirteen", SolnM: "decrease"},
+                    {SolnFourteen: "soln fourteen", SolnN: "Schwarzschild radius"},
+                    {SolnFifteen: "soln fifteen", SolnO: "decreasing"},
+                    {SolnSixteen: "soln sixteen", SolnP: "Population 1"},
+                    {SolnSeventeen: "soln seventeen", SolnQ: "Population 2"},
+                    {SolnEightteen: "soln eighteen", SolnR: "standard candles"},
+                    {Shift: "shift", Blueshift: "towards", Redshift: "away"},
+                    {Series:"series", Lyman: "1", Balmer: "2", Paschen: "3"},
+                    {OBAFGKMColour:"obafgkmcolour", OClassification: "Blue", BClassification: "Light Blue", AClassification: "White", FClassification: "Yellow-White", GClassification: "Yellow", KClassification: "Orange", MClassification: "Red"},
+                    {OBAFGKMTemp:"obafgkmtemp", OType: "40000", BType: "20000", AType: "10000", FType: "7500", GType: "5500", KType: "4000", MType: "3000"},
+                    {RedshiftCalculation: "redshift calculation", ThirtyMillion: "0.1", SixtyMillion: "0.2", NinetyMillion: "0.3", OneHundreedAndTwentyMillion: "0.4", OneHundredAndFiftyMillion: "0.5", OneHundredAndEightyMillion: "0.6", TwoHundredAndTenMillion: "0.7", TwoHundredAndFortyMillion: "0.8", TwoHundredAndSeventyMillion: "0.9", ThreeHundredMillion: "1.0",
+                    ThreeHundredAndThirtyMillion: "1.1", ThreeHundredAndSixtyMillion: "1.2", ThreeHundredAndNinetyMillion: "1.3", FourHundredAndTwentyMillion: "1.4", FourHundredAndFiftyMillion: "1.5", FourHundredAndEightyMillion: "1.6", FiveHundredAndTenMillion: "1.7", FiveHundredAndFortyMillion: "1.8", FiveHundredAndSeventyMillion: "1.9", SixHundredMillion: "2.0"},
+                    {BlackholeCalculation: "blackhole calculation", TwoPointZero: "30", TwoPointTwo: "33", TwoPointFour: "36", TwoPointSix: "39", TwoPointEight: "42", Three: "44", ThreepointTwo: "47", ThreePointFour: "50", ThreePointSeven: "55", ThreePointEight: "56", Four: "59", FourPointFive: "67", FourPointSix: "68", FivePointNine: "88", SixPointThree:"93", 
+                    SevenPointFive:"111", EightPointTwo: "122", NinePointFour: "139", NinePointEight: "145"}
+                    
+                   ];
+
+
+function getAnswer(property, item)
+{
+    switch(property)
+    {
+        // case "Components":
+        //     return "The " + formatCasing(property) + " of the " + item.PplName + " are " + item[property] + ". ";
+        
+        // case "TypeOne":
+        // case "TypeTwo":
+        // case "TypeThree":
+        // case "TypeFour":
+        // case "TypeFive":
+        //     return "The " + formatCasing(property) + " of the " + item.Classification + " is " + item[property] + ". ";
+        
+        // case "EvidenceOne":
+        // case "EvidenceTwo":
+        // case "EvidenceThree":
+        // 	return "The " +formatCasing(property) + " of light as a particle is, " + item[property]+".";
+        
+        case "Redshift":
+        case "Blueshift":
+            return "The answer is, "+ item[property]+",";
+            
+        case "AnswerOne":
+        case "Lyman":
+        case "Balmer":
+        case "Paschen":
+            return "The answer is, " + item[property]+",";
+        
+        case "SolutionOne":
+            return "The answer is, " + item[property]+",";
+        
+        case "OClassification":
+        case "BClassification":
+        case "AClassification":
+        case "FClassification":
+        case "GClassification":
+        case "KClassification":
+        case "MClassification":
+            return "The answer is, " + item[property]+",";
+        
+        case "E0":
+        case "E7":
+            return "The answer is, " + item[property]+",";
+        
+        case "SolnA":
+        case "SolnB":
+        case "SolnC":
+        case "SolnD":
+        case "SolnE":
+        case "SolnF":
+        case "SolnG":
+        case "SolnH":
+        case "SolnI":
+        case "SolnJ":
+        case "SolnK":
+        case "SolnL":
+        case "SolnM":
+        case "SolnN":
+        case "SolnO":
+        case "SolnP":
+        case "SolnQ":
+        case "SolnR":
+            return "The answer is, " + item[property]+",";
+        
+        case "OneHundredMetres":
+        case "OneCentimeter": 
+        case "TenThousandNanoMetres":
+        case "FiveHundredNanoMetres": 
+        case "OneHundredNanoMetres": 
+        case "OneNanoMetre":
+            return "The answer is, " + item[property]+",";
+        
+        case "OType":
+        case "BType":
+        case "AType":
+        case "FType":
+        case "GType":
+        case "KType":
+        case "MType":
+            return "The surface temperature of a " +formatCasing(property) + " is, " + item[property]+",";
+            
+        case "ThirtyMillion":
+        case "SixtyMillion":
+        case "NinetyMillion":
+        case "OneHundreedAndTwentyMillion":
+        case "OneHundredAndFiftyMillion":
+        case "OneHundredAndEightyMillion":
+        case "TwoHundredAndTenMillion":
+        case "TwoHundredAndFortyMillion":
+        case "TwoHundredAndSeventyMillion":
+        case "ThreeHundredMillion":
+        case "ThreeHundredAndThirtyMillion":
+        case "ThreeHundredAndSixtyMillion":
+        case "ThreeHundredAndNinetyMillion":
+        case "FourHundredAndTwentyMillion":
+        case "FourHundredAndFiftyMillion":
+        case "FourHundredAndEightyMillion":
+        case "FiveHundredAndTenMillion":
+        case "FiveHundredAndFortyMillion":
+        case "FiveHundredAndSeventyMillion":
+        case "SixHundredMillion":
+            return "The redshift to one decimal place of a galaxy with a recession velocity of " +formatCasing(property) + " metres per second is, " + item[property]+",";
+        
+        case "TwoPointZero":
+        case "TwoPointTwo":
+        case "TwoPointFour":
+        case "TwoPointSix":
+        case "TwoPointEight":
+        case "Three":
+        case "ThreepointTwo":
+        case "ThreePointFour":
+        case "ThreePointSeven":
+        case "ThreePointEight":
+        case "Four":
+        case "FourPointFive":
+        case "FourPointSix":
+        case "FivePointNine":
+        case "SixPointThree":
+        case "SevenPointFive":
+        case "EightPointTwo":
+        case "NinePointFour":
+        case "NinePointEight": 
+            return "The redshift to one decimal place of a galaxy with a recession velocity of, " +formatCasing(property) + ", metres per second?";	
+        	
+        
+        // default:
+        //     return "The " + formatCasing(property) + " of the " + item.PplName + " is " + item[property] + ", ";
+    }
+}
+
+
