@@ -1,1 +1,1 @@
-Ignore the files in this folder, as they were used for early development.
+The files in this folder were used for early development.
